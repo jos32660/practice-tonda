@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+.pt-serif{font-family: 'Raleway', sans-serif; font-weight: 600;}
+.pt-serif-l{font-family: 'Raleway', sans-serif;}
+
+.wrap{max-width: 98%; margin: 0 auto;}
+
+
+/* media */
+/* 0~575 - 스마트폰 세로 */
+
+
+.logo-img{height: 70%; width: auto;}
+.navi-wrap{display: none;}
+
+
+.m-line{display: block; width: 40px; height:1px; background-color: black;}
+
+.bt-m{background-color: #222; color: #f1f1f1; padding: 1.3rem 2.5rem; letter-spacing: 0.25rem; cursor: pointer;
+transition: all 0.5s;}
+.bt-m:last-child{background-color: #eedcda; color: #222;}
+.bt-m:hover{background-color: #eedcda; color: #222;}
+.bt-m:last-child:hover{background-color: #222; color: #f1f1f1;}
+
+.pager > div{float: left;}
+.pager > div:last-child{float: right;}
+
+/* 576~767까지 - sm - 스마트폰 가로 */
+@media screen and (min-width:576px) {
+
+}
+
+/* 768~991 - md - 태블릿 세로 */
+@media screen and (min-width:768px){
+
+}
+
+/* 992~1199 - lg - 태블릿 가로 */
+@media screen and (min-width:992px){
+	.navi-wrap{display: flex;}
+}
+/* 1200~ - xl - PC */
+@media screen and (min-width:1200px){}
