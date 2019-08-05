@@ -12,15 +12,30 @@ var minInterval;
 $(".n-line").addClass("d-none");
 $(".n-line").eq(0).removeClass("d-none");
 
+
+
 $(".navi-wrap > li").mouseenter(function(){
 	$(this).eq(0).find(".n-line").removeClass("d-none");
 	$(this).find(".n-line").stop().animate({"width":"3rem","opacity":1},minSpeed/2);
 	$(this).children(".navi-sub,.navi-sub2,.navi-sub3").stop().slideDown(300);
 });
 $(".navi-wrap > li").mouseleave(function(){
+	// $(this).eq(0).find(".n-line").css({"display":"block"});
 	$(this).eq(0).find(".n-line").removeClass("d-none");
 	$(this).find(".n-line").stop().animate({"width":0,"opacity":0},minSpeed/2);
 	$(this).children(".navi-sub,.navi-sub2,.navi-sub3").stop().slideUp(300);
+});
+
+$("n-line-2").addClass("d-none");
+$("n-line-2").eq(1).removeClass("d-none");
+
+$(".navi-sub-col > .sub").mouseenter(function(){
+	$(this).find(".n-line-2").eq(1).removeClass("d-none");
+	$(this).find(".n-line-2").stop().animate({"width":"3rem","opacity":1},minSpeed/2);
+});
+$(".navi-sub-col > .sub").mouseleave(function(){
+	$(this).find(".n-line-2").eq(1).removeClass("d-none");
+	$(this).find(".n-line-2").stop().animate({"width":0,"opacity":0},minSpeed/2);
 });
 
 
@@ -103,15 +118,56 @@ $(".pager .page").click(function(){
 });
 
 //product
-for(var i = 0; i<3; i++) $(".prts").append($(".prt").eq(0).clone());
+var prts = [
+	{
+		src : "../img/product-14-1-620x620.jpg",
+		title : "NORDIC VASE",
+		desc : "$310"
+	},
+	{
+		src : "../img/product-12-620x620.jpg",
+		title : "SAND PLATE",
+		desc : "$250"
+	},
+	{
+		src : "../img/product-13-620x620.jpg",
+		title : "PINK MUG",
+		desc : "$170"
+	},
+	{
+		src : "../img/product-43.jpg",
+		title : "INDIGO PLATE",
+		desc : "$300"
+	},
+]
+
+
+
+for(var i in prts) {
+	html  = '<ul class="prt">';
+	html += '<li class="prt-imgs position-relative">';
+	html += '<div class="prt-img">';
+	html += '<img src="'+prts[i].src+'" alt="제품이미지" class="w-100">';
+	html += '</div>';
+	html += '<div class="prt-icons position-absolute d-flex">';
+	html += '<div class="prt-icon prt-plus"><i class="fas fa-plus"></i></div>';
+	html += '<div class="prt-icon prt-view"><i class="far fa-eye"></i></div>';
+	html += '<div class="prt-icon prt-heart"><i class="far fa-heart"></i></div>';
+	html += '</div>';
+	html += '</li>';
+	html += '<li class="prt-tit pointer text-center">'+prts[i].title+'</li>';
+	html += '<li class="text-center my-2 text-secondary">'+prts[i].desc+'</li>';
+	html += '</ul>';
+	$(".prts").append(html);
+}
 
 $(".prt-imgs").mouseenter(function(){
-	$(this).children(".prt-icon").css({"opacity":1,"display":"block"});
-	$(this).children(".prt-img").css({"opacity":"0.2"});
+	$(this).find(".prt-icon").css({"opacity":1,"display":"block"});
+	$(this).find("img").css({"opacity":"0.1","transition":"all 0.5s"});
 });
 $(".prt-imgs").mouseleave(function(){
-	$(this).children(".prt-icon").css({"opacity":0,"display":"none"});
-	$(this).children(".prt-img").css({"opacity":1});
+	$(this).find(".prt-icon").css({"opacity":0,"display":"none"});
+	$(this).find("img").css({"opacity":1});
 });
 
 
