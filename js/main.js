@@ -30,12 +30,16 @@ $("n-line-2").addClass("d-none");
 $("n-line-2").eq(1).removeClass("d-none");
 
 $(".navi-sub-col > .sub").mouseenter(function(){
-	$(this).find(".n-line-2").eq(1).removeClass("d-none");
 	$(this).find(".n-line-2").stop().animate({"width":"3rem","opacity":1},minSpeed/2);
 });
 $(".navi-sub-col > .sub").mouseleave(function(){
-	$(this).find(".n-line-2").eq(1).removeClass("d-none");
 	$(this).find(".n-line-2").stop().animate({"width":0,"opacity":0},minSpeed/2);
+});
+$(".navi-sub-col .sub").mouseenter(function(){
+	$(this).find(".n-line-3,.n-line-4").stop().animate({"width":"3rem","opacity":1},minSpeed/2);
+});
+$(".navi-sub-col .sub").mouseleave(function(){
+	$(this).find(".n-line-3,.n-line-4").stop().animate({"width":0,"opacity":0},minSpeed/2);
 });
 
 
@@ -84,6 +88,15 @@ $(window).resize(function(){
 });
 $(".min-img").imagesLoaded(function(){
 	$(window).trigger("resize");
+});
+
+$(window).scroll(function(){
+	var scTop = $(this).scrollTop();
+	if(scTop > 400) $(".bt-top").addClass("bt-top-show");
+	else $(".bt-top").removeClass("bt-top-show");
+});
+$(".bt-top").click(function(){
+	$("html, body").stop().animate({"scrollTop":0},500);
 });
 
 function minAni(){
@@ -170,8 +183,90 @@ $(".prt-imgs").mouseleave(function(){
 	$(this).find("img").css({"opacity":1});
 });
 
+//slide
 
+var slideMain = [
+	{
+		src : "../img/testimonials-img-2-100x100.png",
+		title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit leo, eget eui dolor.In ut ullamcorper leo, eget euismod orci. Cum sociis natoquem ipsum dolor sit amet ",
+		desc : "Vera Briggs"
+	},
+	{
+		src : "../img/testimonials-img-1-100x100.png",
+		title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit leo, eget eui dolor.In ut ullamcorper leo, eget euismod orci. Cum sociis natoquem ipsum dolor sit amet ",
+		desc : "Milla Grant"
+	}
+]
 
+var slideNow = 0;
+var slideEnd = slideMain.length - 1;
+var dir = "L";
+var tar;
+var cnt = 1;
+var slideCnt = cnt + 2;
+var slideWid = (100/cnt).toFixed(4);
+var slideSpeed = 500;
+var slideGap = 3000;
+var arr = [];
+
+init();
+function init(){
+	for(var i=0, html=''; i<slideCnt; i++){
+	html  = '<div class="slide-ins position-absolute" style = "flex: '+slideWid+'% 0 0;">';
+	html += '<img src="" class="w-100">';
+	html += '</div>';
+	html += '<div class="slide-cont position-absolute">';
+	html += '<h5 class="text-center f-1"></h5>';
+	html += '<h4 class="text-center f-075" style="font-weight: bold; letter-spacing: 0.2rem;"></h4>';
+	html += '</div>';
+	$(".slide-main").html(html);
+	}
+}
+
+slideInit();
+function slideInit(){
+	if(slideNow == 0) arr[0] = slideEnd;
+	else arr[0] = slideNow - 1;
+	for(var i=0; i<=cnt; i++){
+		if(i + slideNow > slideEnd) arr[(i+1)] = i + slideNow - slideEnd - 1;
+		else arr[(i+1)] = slideNow + i;
+	}
+
+	for(var i=0; i<slideCnt; i++){
+		$(".slide-ins").eq(i).find("img").attr("src", slideMain[arr[i]].src);
+		$(".slide-cont").eq(i).find("h5").html(slideMain[arr[i]].title);
+		$(".slide-cont").eq(i).find("h4").html(slideMain[arr[i]].desc);
+	}
+	$(".slide-main").css({"left":-slideWid+"%"});
+}
+
+function sildeAni(){
+	if(dir == "L") tar = 2*slideWid + "%";
+	else tar = 0;
+	$(".slide-main").stop().animate({"left":tar}, slideSpeed, slideInit);
+}
+
+$("#p-left").click(function(){
+	if(slideNow == slideEnd) slideNow = 0;
+		else now++;
+	sildeAni();
+});
+$("#p-right").click(function(){
+	if(slideNow == 0) slideNow = slideEnd;
+		else slideNow--; 
+	sildeAni();
+});
+
+//blog
+
+$(".blog").mouseenter(function(){
+	$(this).children("img").stop().animate({"opacity":0.8}, 300);
+	$(this).children(".blog-box").stop().animate({"bottom":"3rem"}, 300);
+});
+$(".blog").mouseleave(function(){
+	$(this).children("img").stop().animate({"opacity":1}, 300);
+	$(this).children(".blog-box").stop().animate({"bottom":"2rem"}, 300);
+});
 
 
 // WOW 시동
