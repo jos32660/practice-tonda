@@ -17,8 +17,8 @@
 .logo-img{height: 70%; width: auto;}
 .navi-wrap{display: none;}
 .navi-sub{position: absolute; top:55px; left: -10px; z-index: 9999; display: flex; background-color: #fff; display: none;}
-.navi-sub2{position: absolute; top:55px; left: -313px; z-index: 9999; display: flex; background-color: #fff; display: none;}
-.navi-sub3{position: absolute; top:55px; left: -587px; z-index: 9999; display: flex; background-color: #fff; display: none;}
+.navi-sub2{position: absolute; top:55px; left: -345px; z-index: 9999; display: flex; background-color: #fff; display: none;}
+.navi-sub3{position: absolute; top:55px; left: -618px; z-index: 9999; display: flex; background-color: #fff; display: none;}
 .navi-sub2 > .navi-sub-col {width: 1880px; min-height: 400px;}
 .navi-sub3 > .navi-sub-col {width: 1880px; min-height: 300px;}
 #col1{width:250px; min-height: 300px;}
