@@ -92,13 +92,13 @@ transition: all 0.5s;}
 .deco{padding: 4rem 3rem;}
 
 .slides{height: 20rem;}
-.slide-ins{top: 5rem; left: 44%; z-index: 999;}
+.slide-ins{top: 5rem; z-index: 999;}
 .slide-bg{color: #e4e4e4; position: absolute; z-index: 99; margin: 0 40%; font-size: 12rem; font-family: 'Palanquin Dark', sans-serif;}
-.slide-pager{position: absolute; margin: 10rem 0; z-index: 99; transition: all 0.5s;}
-.slide-pager:last-child{right: 0;}
+.slide-pager{position: absolute; z-index: 9999; transition: all 0.5s; top: 10rem;}
+#p-right{right: 2rem;}
 .slide-pager:hover{color: #7c7c7c;}
 .slide-cont{margin: 15rem 10rem;}
-.slide-cont > h5{color: #7c7c7c;}
+.slides h5{color: #7c7c7c;}
 
 .blog-wrap{max-width: 1300px; margin: 0 auto; margin-bottom: 10rem;}
 .blog{transition: all 0.5s; flex: 90% 0 1;}

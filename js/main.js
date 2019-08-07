@@ -76,7 +76,7 @@ for(var i in mains) {
 	html = '<img src="' + mains[i].src + '" class="min-img mw-100 position-absolute z-index: 99;">';
 	html += '<div class="main-cont position-absolute" style="top: 20%;z-index: 999; opacity: 0;';
 	if(mains[i].position == "left") html += ' left: 0; ">';
-	html += '<li class="pt-serif display-3 my-2">' + mains[i].title + '</li>';
+	html += '<li class="pt-serif display-3 my-2" style="letter-spacing:0.3rem;">' + mains[i].title + '</li>';
 	html += '<ul class="d-flex my-2">';
 	html += '<li class="m-line mx-2 my-2"></li>';
 	html += '<li class="f-125 text-secondary col-md-6">' + mains[i].desc + '</li>';
@@ -218,16 +218,15 @@ var arr = [];
 init();
 
 function init() {
-	console.log(slideCnt);
-	for(var i = 0, html = ''; i < slideCnt; i++) {
-		html += '<div class="slide-ins d-flex flex-column px-5 justify-content-center align-items-center h-100" style="flex:'+slideWid+'% 0 0;">';
+	for(var i = 0, html = ''; i<slideCnt; i++) {
+		html += '<div class="slide-ins d-flex flex-column justify-content-center align-items-center h-100" style="flex:'+slideWid+'% 0 0; padding: 0 8rem;">';
 		html += '<img src="" class="mw-100">';
 		html += '<h5 class="text-center f-1"></h5>';
 		html += '<h4 class="text-center f-075" style="font-weight: bold; letter-spacing: 0.2rem;"></h4>';
 		html += '</div>';
 	}
 	$(".slides").html(html);
-	$(".slides").css({"left": -slideWid+"%"})
+	$(".slides").css({"left": -slideWid+"%"});
 }
 
 slideInit();
@@ -245,18 +244,18 @@ function slideInit() {
 		$(".slide-ins").eq(i).find("h5").html(slideMain[arr[i]].title);
 		$(".slide-ins").eq(i).find("h4").html(slideMain[arr[i]].desc);
 	}
-	$(".slide-main").css({"left": -slideWid + "%"});
+	$(".slides").css({"left":-slideWid+"%"});
 }
 
 function sildeAni() {
-	if(dir == "L") tar = 2 * slideWid + "%";
+	if(dir == "L") tar = -2*slideWid + "%";
 	else tar = 0;
-	$(".slide-main").stop().animate({"left": tar}, slideSpeed, slideInit);
+	$(".slides").stop().animate({"left": tar}, slideSpeed*2, slideInit);
 }
 
 $("#p-left").click(function() {
 	if(slideNow == slideEnd) slideNow = 0;
-	else now++;
+	else slideNow++;
 	sildeAni();
 });
 $("#p-right").click(function() {
