@@ -69,7 +69,9 @@ transition: all 0.5s;}
 .page:hover {color: #7c7c7c;}
 .page:last-child {margin: 0 0;}
 
-.prt-wrap{margin: 6rem auto;}
+.prt-new{background-color: #fceae8; z-index: 999; top: 6rem; left:14rem; width: 4rem; height: 1rem; font-weight: bold; letter-spacing: 0.1rem; text-align: center;}
+.prt-sale{background-color: #fceae8; z-index: 999; top: 6rem; left:47rem; width: 4rem; height: 1rem; font-weight: bold; letter-spacing: 0.1rem; text-align: center;}
+.prt-wrap{margin: 6rem auto; position: relative;}
 .prt-line{display: block; width: 2rem; height: 1px; background-color: #222;}
 .prt{ flex: 24.5% 0 1;}
 .prts .prt-tit{transition: all 0.5s;}
