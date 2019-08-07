@@ -19,9 +19,42 @@
 </head>
 
 <body>
+	<div class="menu position-fixed">
+			<div class="closes f-2 m-2 pointer">×</div>
+			<div style="padding: 2rem 4rem;">
+				<div class="menu-logo"><img src="../img/logo-side-area.png" alt="" class="w-100"></div>
+				<div class="menu-cont text-justify f-0875 text-secondary mb-5">If you’d like to try an alternative to classic
+					porcelain,
+					then Tonda is the perfect complement to your home.</div>
+			 <form action="#" method="GET">
+			 	<div class="menu-news pt-serif">
+					<h5 class="mb-3 font-weight-bold f-1">NEWSLETTER</h5>
+					<input type="email" name="email" placeholder="EMAIL" class="menu-ins f-075 font-weight-bold">
+					<input type="submit" value="SEND" class="menu-bt pointer f-075"></input>
+				</div>
+			 </form>
+			<div class="menu-sns">
+				<h5 class="f-1 pt-serif mb-4">FOLLOW US</h5>
+				<i class="fab fa-facebook-f mr-4 f-125"></i>
+				<i class="fab fa-twitter mr-4 f-125"></i>
+				<i class="fab fa-instagram mr-4 f-125"></i>
+			</div>
+			<div class="menu-imgs position-relative my-5">
+				<li class="menu-img float-left"><img src="../img/menu-1.jpg" alt="" class="w-100"></li>
+				<li class="menu-img float-left"><img src="../img/menu-2.jpg" alt="" class="w-100"></li>
+				<li class="menu-img float-left"><img src="../img/menu-3.jpg" alt="" class="w-100"></li>
+				<li class="menu-img float-left"><img src="../img/menu-4.jpg" alt="" class="w-100"></li>
+				<div class="position-absolute" style="left: 25%; margin: 40% 0;">
+					<div class="menu-insta pt-serif">INSTAGRAM</div>
+				</div>
+			</div>
+		</div>
+		</div>
 	<div class="wrap">
-		<header class="top-wrap pt-serif p-4 d-flex justify-content-between ailgn-items-center position-relative">
+		<header class="top-wrap pt-serif p-4 d-flex ailgn-items-center position-relative">
 			<div class="logo d-flex">
+				<i class="logo-bars fas fa-bars"></i>
+				<i class="logo-cart fas fa-shopping-cart"> 0</i>
 				<img src="../img/logo-side-area.png" alt="tonda" class="mw-100 logo-img">
 				<ul class="navi-wrap f-075 text-dark">
 					<li class="mx-2 px-3 py-1 position-relative pointer"><span class="n-line"></span>
@@ -238,14 +271,7 @@
 				<li class="mx-2 px-2 py-1 f-1"><i class="fas fa-bars"></i></li>
 			</ul>
 		</header>
-		<div class="menu position-fixed">
-			<div class="closes f-2 m-2 pointer">×</div>
-			<div class="py-3 px-5">
-				<div class="menu-logo"><img src="../img/logo-side-area.png" alt="" class="w-100"></div>
-				<div class="menu-cont text-justify">If you’d like to try an alternative to classic porcelain, 
-					then Tonda is the perfect complement to your home.</div>
-			</div>
-		</div>
+		
 		<div class="main-wrap pt-serif-l">
 			<div class="main position-relative d-flex">
 				<div class="pager d-flex position-absolute" style="z-index: 9999; top: 50%;">
@@ -309,7 +335,7 @@
 	</div>
 	<div class="blog-wrap pt-serif">
 		<div class="d-flex" style="margin-top: 10rem;">
-			<div class="blog mx-3 position-relative pointer" style="flex: 40% 0 1">
+			<div class="blog mx-3 position-relative pointer">
 				<img src="../img/blog-masonry-3.jpg" alt="" class="w-100">
 				<ul class="blog-box position-absolute">
 					<li class="f-075 mb-2" style="letter-spacing: 0.1rem">ART- TRAVEL</li>
@@ -318,7 +344,7 @@
 					<li class="f-0875 text-secondary">Nina Marling</li>
 				</ul>
 			</div>
-			<div class="blog mx-3 position-relative pointer" style="flex: 40% 0 1">
+			<div class="blog mx-3 position-relative pointer">
 				<img src="../img/blog-masonry-2.jpg" alt="" class="w-100">
 				<ul class="blog-box position-absolute">
 					<li class="f-075 mb-2" style="letter-spacing: 0.1rem">ART- TRAVEL</li>
@@ -327,7 +353,7 @@
 					<li class="f-0875 text-secondary">Nina Marling</li>
 				</ul>
 			</div>
-			<div class="blog mx-3 position-relative pointer" style="flex: 40% 0 1">
+			<div class="blog mx-3 position-relative pointer">
 				<img src="../img/blog-masonry-1.jpg" alt="" class="w-100">
 				<ul class="blog-box position-absolute">
 					<li class="f-075 mb-2" style="letter-spacing: 0.1rem">ART- TRAVEL</li>
@@ -353,26 +379,26 @@
 				</li>
 			</div>
 			<div style="margin: 5rem 0;">
-			 <li class="pt-serif my-3">HELP</li>
-			 <li class="my-2">FAQ’s</li>
-			 <li class="my-2">Pricing Plans</li>
-			 <li class="my-2">Track</li> 
-			 <li class="my-2">Your Order</li>
-			 <li class="my-2">Returns</li>
+				<li class="pt-serif my-3">HELP</li>
+				<li class="my-2">FAQ’s</li>
+				<li class="my-2">Pricing Plans</li>
+				<li class="my-2">Track</li>
+				<li class="my-2">Your Order</li>
+				<li class="my-2">Returns</li>
 			</div>
 			<div style="margin: 5rem 0;">
-			 <li class="pt-serif my-3">ABOUT US</li>
-			 <li class="my-2">Our Story</li>
-			 <li class="my-2">Job Opportunities</li>
-			 <li class="my-2">Store Locator</li>
-			 <li class="my-2">Contact Us</li>
+				<li class="pt-serif my-3">ABOUT US</li>
+				<li class="my-2">Our Story</li>
+				<li class="my-2">Job Opportunities</li>
+				<li class="my-2">Store Locator</li>
+				<li class="my-2">Contact Us</li>
 			</div>
 			<div style="margin: 5rem 0;">
-			 <li class="pt-serif my-3">CUSTOMER SERVICES</li>
-			 <li class="my-2">My Account</li>
-			 <li class="my-2">Terms of Use</li>
-			 <li class="my-2">Deliveries & Returns</li>
-			 <li class="my-2">Gift card</li>
+				<li class="pt-serif my-3">CUSTOMER SERVICES</li>
+				<li class="my-2">My Account</li>
+				<li class="my-2">Terms of Use</li>
+				<li class="my-2">Deliveries & Returns</li>
+				<li class="my-2">Gift card</li>
 			</div>
 		</div>
 	</footer>

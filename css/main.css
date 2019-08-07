@@ -10,7 +10,10 @@
 /* media */
 /* 0~575 - 스마트폰 세로 */
 
-
+.top-wrap{justify-content: center; margin-top: 1rem; margin-left: 2rem;}
+.logo-bars{position: absolute; left: 1rem; transition: all 0.5s; cursor: pointer;}
+.logo-bars:hover{color: #7c7c7c;}
+.logo-cart{position: absolute; right: 1rem;}
 .logo-img{height: 70%; width: auto;}
 .navi-wrap{display: none;}
 .navi-sub{position: absolute; top:55px; left: -10px; z-index: 9999; display: flex; background-color: #fff; display: none;}
@@ -25,10 +28,16 @@
 .navi-sub > .sub{position: absolute; }
 
 
-.menu{width: 30rem; height: 60rem; background-color: #fff7f6; z-index: 10000; right: 0; top: 0;}
+.menu{width: 30rem; height: 70rem; background-color: #fff7f6; z-index: 10000; right: -30rem; top: 0;}
 .closes{text-align: right; transition: all 0.5s;}
 .closes:hover{color: #7c7c7c;}
-.menu-logo{float: left; }
+.menu-logo{margin-bottom: 3rem; margin-right: 12rem;}
+.menu-ins{border: none; padding: 1rem 13rem 1rem 1rem; letter-spacing: 0.1rem;}
+.menu-bt{border: none; background-color: #222; color: #fff; padding: 0.8rem 2rem; letter-spacing: 0.2rem; margin: 1.5rem 15.6rem; transition: all 0.5s;}
+.menu-bt:hover{background-color: #f1f1f1; color: #222;}
+.menu-img{width: 50%; cursor: pointer; transition: all 0.5s;}
+.menu-img:hover{opacity: 0.6;}
+.menu-insta{background-color: #fff; padding: 1.5rem 3rem; z-index: 9999;}
 
 .n-line{position: absolute; width: 3rem; top: 0.75rem; left: 0; display: block; border: 1px solid #e7a39a5d;}
 .n-line-2{position: absolute; width: 3rem; top: 1rem; left: 1rem; display: none; border: 1px solid #e7a39a5d;}
@@ -41,7 +50,8 @@
 #line5{left: 69rem;}
 #line6{left: 94rem;}
 
-.link-wrap > li{cursor: pointer; transition: all 0.5s;}
+
+.link-wrap > li{display: none; cursor: pointer; transition: all 0.5s;}
 .link-wrap > li:hover{color: #7c7c7c;}
 
 
@@ -89,7 +99,7 @@ transition: all 0.5s;}
 .slide-cont > h5{color: #7c7c7c;}
 
 .blog-wrap{max-width: 1300px; margin: 0 auto; margin-bottom: 10rem;}
-.blog{transition: all 0.5s;}
+.blog{transition: all 0.5s; flex: 90% 0 1;}
 .blog-box{width: calc(100%-4rem); height: 12rem; padding: 2rem; background-color: #fff; color: #222; bottom:2rem; left: 2rem; right: 2rem; z-index: 999;}
 
 .footer{position: relative; height: 25rem; width: 100%; background-color: #222; color: #fff;}
@@ -100,17 +110,26 @@ transition: all 0.5s;}
 
 /* 576~767까지 - sm - 스마트폰 가로 */
 @media screen and (min-width:576px) {
-
+	.logo-bars{display:block;}
+	.logo{display :flex;}
+	.navi-wrap{display: none;}
+	.link-wrap > li {display: none;}
 }
 
 /* 768~991 - md - 태블릿 세로 */
 @media screen and (min-width:768px){
-
 }
 
 /* 992~1199 - lg - 태블릿 가로 */
 @media screen and (min-width:992px){
+	.top-wrap{justify-content: space-between;}
+	.logo{justify-content: stretch;}
+	.logo-bars{display:none;}
+	.logo-cart{display:none;}
+	.logo > .logo-img{margin: 0;}
 	.navi-wrap{display: flex;}
+	.link-wrap > li {display: flex;}
+	.blog{transition: all 0.5s; flex: 40% 0 1;}
 }
 /* 1200~ - xl - PC */
 @media screen and (min-width:1200px){}

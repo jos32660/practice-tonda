@@ -42,6 +42,15 @@ $(".navi-sub-col .sub").mouseleave(function(){
 	$(this).find(".n-line-3,.n-line-4").stop().animate({"width":0,"opacity":0},minSpeed/2);
 });
 
+//bars
+$(".link-wrap .fa-bars").click(function(){
+	$(".wrap,.concept-wrap,.deco-wrap,.blog-wrap,.container,footer").css({"opacity":"0.6"});
+	$(".menu").stop().animate({"right":0}, 500);
+});
+$(".menu > .closes").click(function(){
+	$(".wrap,.concept-wrap,.deco-wrap,.blog-wrap,.container,footer").css({"opacity":1});
+	$(".menu").stop().animate({"right":"-30rem"}, 500);
+});
 
 //mains
 var mains = [
