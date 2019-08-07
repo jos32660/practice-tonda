@@ -102,7 +102,7 @@ transition: all 0.5s;}
 
 .blog-wrap{max-width: 1300px; margin: 0 auto; margin-bottom: 10rem;}
 .blog{transition: all 0.5s; flex: 90% 0 1;}
-.blog-box{width: calc(100%-4rem); height: 12rem; padding: 2rem; background-color: #fff; color: #222; bottom:2rem; left: 2rem; right: 2rem; z-index: 999;}
+.blog-box{width: calc(100% - 4rem); height: 12rem; padding: 2rem; background-color: #fff; color: #222; bottom:2rem; left: 2rem; right: 2rem; z-index: 999;}
 
 .footer{position: relative; height: 25rem; width: 100%; background-color: #222; color: #fff;}
 
