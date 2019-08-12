@@ -73,7 +73,7 @@ transition: all 0.5s;}
 .prt-sale{background-color: #fceae8; z-index: 999; top: 6rem; left:47rem; width: 4rem; height: 1rem; font-weight: bold; letter-spacing: 0.1rem; text-align: center;}
 .prt-wrap{margin: 6rem auto; position: relative;}
 .prt-line{display: block; width: 2rem; height: 1px; background-color: #222;}
-.prt{ flex: 24.5% 0 1;}
+/* .prt{ flex: 90% 0 1;} */
 .prts .prt-tit{transition: all 0.5s;}
 .prts .prt-tit:hover{color: #7c7c7c;}
 .prt-imgs {height: 20rem; transition: all 1s;}
@@ -132,6 +132,7 @@ transition: all 0.5s;}
 	.navi-wrap{display: flex;}
 	.link-wrap > li {display: flex;}
 	.blog{transition: all 0.5s; flex: 40% 0 1;}
+	/* .prt{ flex: 24.5% 0 1;} */
 }
 /* 1200~ - xl - PC */
 @media screen and (min-width:1200px){}

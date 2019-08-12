@@ -163,7 +163,7 @@ var prts = [
 
 
 for(var i in prts) {
-	html = '<ul class="prt">';
+	html = '<ul class="prt col-md-3">';
 	html += '<li class="prt-imgs position-relative">';
 	html += '<div class="prt-img">';
 	html += '<img src="' + prts[i].src + '" alt="제품이미지" class="w-100">';
