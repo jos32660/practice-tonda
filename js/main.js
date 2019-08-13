@@ -163,7 +163,7 @@ var prts = [
 
 
 for(var i in prts) {
-	html = '<ul class="prt col-md-3">';
+	html = '<ul class="prt col-md-3 col-sm-6">';
 	html += '<li class="prt-imgs position-relative">';
 	html += '<div class="prt-img">';
 	html += '<img src="' + prts[i].src + '" alt="제품이미지" class="w-100">';
@@ -174,7 +174,7 @@ for(var i in prts) {
 	html += '<div class="prt-icon prt-heart"><i class="far fa-heart"></i></div>';
 	html += '</div>';
 	html += '</li>';
-	html += '<li class="prt-tit pointer text-center">' + prts[i].title + '</li>';
+	html += '<li class="prt-tit pointer text-center pt-serif">' + prts[i].title + '</li>';
 	html += '<li class="text-center my-2 text-secondary">' + prts[i].desc + '</li>';
 	html += '</ul>';
 	$(".prts").append(html);
